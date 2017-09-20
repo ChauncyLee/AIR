@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 各污染物超标级别 -->
+    <string-array name="overProofLevel">
+        <!-- 温度 -->
+        <item>0</item>
+        <!-- PH -->
+        <item>0.4</item>
+        <!-- 溶解氧 -->
+        <item>1.5</item>
+        <!-- 浊度 -->
+        <item>20</item>
+        <!-- 电导率 -->
+        <item>4</item>
+        <!-- 蓝绿藻 -->
+        <item>20</item>
+        <!-- 叶绿素 -->
+        <item>20</item>
+        <!-- 氨氮 -->
+        <item>0.5</item>
+        <!-- 水流 -->
+        <item>0</item>
+    </string-array>
+
+    <!-- HomepageFragment ViewPager 图片 -->
+    <array name="pictureId">
+        <item>@drawable/advertisement1</item>
+        <item>@drawable/advertisement2</item>
+        <item>@drawable/advertisement3</item>
+        <item>@drawable/advertisement4</item>
+        <item>@drawable/advertisement5</item>
+    </array>
+
+    <!-- HomepageFragment GridView 图片 -->
+    <array name="homePage_GridView_Image">
+        <item>@drawable/icon_real_time_monitoring</item>
+        <item>@drawable/icon_historical_data_query</item>
+        <!--<item>@drawable/icon_abnormal_data_query</item>
+        <item>@drawable/icon_map_warning</item>-->
+        <item>@drawable/icon_coming_soon</item>
+
+    </array>
+
+    <!-- HomepageFragment GridView 文字 -->
+    <string-array name="homePage_GridView_Text">
+        <item>@string/real_time_monitoring</item>
+        <item>@string/historical_data_query</item>
+        <!--<item>@string/abnormal_data_query</item>
+        <item>@string/map_warning</item>-->
+        <item>@string/coming_soon</item>
+
+    </string-array>
+
+    <!-- ParameterSelectionActivity GridView 图片 -->
+    <array name="parameterSelection_GridView_Image">
+        <item>@drawable/icon_parameter_temperature</item>
+        <item>@drawable/icon_parameter_ph</item>
+        <item>@drawable/icon_parameter_dissolved_oxygen</item>
+        <item>@drawable/icon_parameter_turbidity</item>
+        <item>@drawable/icon_parameter_conductivity</item>
+        <item>@drawable/icon_parameter_blue_green_algae</item>
+        <item>@drawable/icon_parameter_chlorophyll</item>
+        <!--<item>@drawable/icon_parameter_ammonia_nitrogen</item>-->
+        <item>@drawable/icon_parameter_water_flow</item>
+    </array>
+
+    <!-- ParameterSelectionActivity GridView 文字 -->
+    <string-array name="parameterSelection_GridView_Text">
+        <item>@string/temperature</item>
+        <item>@string/humidity</item>
+        <item>@string/wind_speed</item>
+        <item>@string/atmos</item>
+        <item>@string/NH3</item>
+        <item>@string/H2S</item>
+        <item>@string/CH4</item>
+        <item>@string/CO2</item>
+        <!--<item>@string/ph</item>
+        <item>@string/dissolved_oxygen</item>
+        <item>@string/turbidity</item>
+        <item>@string/conductivity</item>
+        <item>@string/blue_green_algae</item>
+        <item>@string/chlorophyll</item>
+        <item>@string/ammonia_nitrogen</item>
+        <item>@string/water_flow</item>
+        <item> </item>-->
+    </string-array>
+
+</resources>

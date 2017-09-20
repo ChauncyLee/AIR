@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="default_site">DTU01</string>
+    <string name="network_error">网络连接异常</string>
+    <string name="no_data">没有查询结果</string>
+    <string name="unavailable">此参数没有异常数据 </string>
+
+    <string name="app_name">境界</string>
+    <string name="get_dtu_list">DTU列表</string>
+
+    <string name="input_username">账号</string>
+    <string name="input_password">密码</string>
+    <string name="login">登录</string>
+    <string name="auto_login">自动登录</string>
+
+    <string name="homepage">主页</string>
+    <string name="me">我的</string>
+    <string name="homepage_title">大气监测系统</string>
+    <string name="me_title">用户中心</string>
+
+    <string name="real_time_monitoring">实时监控</string>
+    <string name="historical_data_query">历史数据查询</string>
+    <string name="dtu_list">DTU列表</string>
+    <string name="abnormal_data_query">异常数据查询</string>
+    <string name="map_warning">地图预警</string>
+    <string name="coming_soon">敬请关注</string>
+    <string name="parameter_selection">参数选择</string>
+
+    <string name="message">news</string>
+    <string name="account_info">账户信息</string>
+    <string name="modify_password">修改密码</string>
+    <string name="logout">退出登录</string>
+
+    <string name="temperature">温度</string>
+    <string name="humidity">湿度</string>
+    <string name="wind_speed">风速</string>
+    <string name="atmos">气压</string>
+    <string name="NH3">氨气</string>
+    <string name="H2S">硫化氢</string>
+    <string name="CH4">甲烷</string>
+    <string name="CO2">二氧化碳</string>
+    <string name="ph">PH</string>
+    <string name="dissolved_oxygen">溶解氧</string>
+    <string name="turbidity">浊度</string>
+    <string name="conductivity">电导率</string>
+    <string name="blue_green_algae">蓝绿藻</string>
+    <string name="chlorophyll">叶绿素</string>
+    <string name="ammonia_nitrogen">氨氮</string>
+    <string name="water_flow">水流</string>
+
+    <string name="conditional_filtering">过滤条件</string>
+    <string name="curve">曲线</string>
+    <string name="table">表格</string>
+    <string name="bar">柱状图</string>
+    <string name="site">站点</string>
+    <string name="time">时间</string>
+    <string name="value">值</string>
+    <string name="max">最大值</string>
+    <string name="min">最小值</string>
+    <string name="average">平均值</string>
+    <string name="normal_range">正常范围</string>
+    <string name="over_proof"> 超标</string>
+
+    <string name="total_page">总计</string>
+    <string name="current_page">页码</string>
+    <string name="page">页面</string>
+    <string name="last_page">最后一页</string>
+    <string name="next_page">下一页</string>
+
+    <string name="site_selection">选择站点</string>
+    <string name="current_site">当前站点</string>
+    <string name="time_selection">选择时间</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="fast_selection">快速选择</string>
+    <string name="commit">提交</string>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="week">一周</string>
+    <string name="cancel">取消</string>
+    <string name="please_select_the_time">请选择一个时间</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="site_query_hint">站点查询提示</string>
+    <string name="confirm">确认</string>
+
+    <string name="old_password">当前密码</string>
+    <string name="new_password">新密码</string>
+    <string name="new_password_hint">请输入6-12位新密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="confirm_password_hint">输入新密码</string>
+
+    <string name="job_number">工号</string>
+    <string name="real_name">真实姓名</string>
+    <string name="mobile_number">手机号码</string>
+    <string name="modify_account_info">修改账户信息</string>
+    <string name="input_realname">输入真实姓名</string>
+    <string name="input_mobilenumber">输入手机号码</string>
+
+    <string name="delete">删除</string>
+    <string name="commit_delete">提交删除</string>
+
+    <string name="message_content1">站点&#160;</string>
+    <string name="message_content2">&#160;参数检测&#160;</string>
+    <string name="message_content3">&#160;反常\n</string>
+    <string name="message_content4">监测值&#160;</string>
+    <string name="message_content5">&#160;，超过标准&#160;</string>
+
+    <!-- 河流警戒级别 -->
+    <string name="normalColor">61DB7E</string>
+    <string name="level1Color">5BE1D6</string>
+    <string name="level2Color">5ABBE2</string>
+    <string name="level3Color">5A85E2</string>
+    <string name="level4Color">496EDF</string>
+    <string name="level5Color">2249BF</string>
+
+</resources>

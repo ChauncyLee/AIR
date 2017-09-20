@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingEnd="40dp"
+    android:paddingStart="40dp"
+    android:paddingTop="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/input_box_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/login_username" />
+
+        <EditText
+            android:id="@+id/edUsername"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_username"
+            android:inputType="text"
+            android:maxLength="11"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/input_box_text"
+            android:textColorHint="@color/input_box_text"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/input_box_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/login_password" />
+
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_password"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/input_box_text"
+            android:textColorHint="@color/input_box_text"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <CheckBox
+                android:id="@+id/cbRememberPassword"
+                style="@style/CustomCheckboxTheme"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:checked="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="@string/auto_login"
+                android:textColor="@color/input_box_text"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/button_corner_orange"
+        android:text="@string/login"
+        android:textColor="@color/application_white"
+        android:textSize="18sp" />
+
+</LinearLayout>

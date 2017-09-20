@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/application_gray"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/application_green">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:baselineAligned="true"
+            android:gravity="center_vertical|start"
+            android:orientation="vertical"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/message"
+            android:textColor="@color/application_white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingStart="5dp"
+            android:text="@string/delete"
+            android:textColor="@color/application_white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/application_line_gray" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/application_white"
+                android:divider="@color/application_gray"
+                android:dividerHeight="7dp" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/application_line_gray" />
+
+        <Button
+            android:id="@+id/submitDelete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/application_green"
+            android:gravity="center"
+            android:text="@string/commit_delete"
+            android:textColor="@color/application_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

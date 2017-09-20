@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/application_green"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:baselineAligned="true"
+            android:gravity="center_vertical|start"
+            android:orientation="vertical"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/real_time_monitoring"
+            android:textColor="@color/application_white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/filter"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:baselineAligned="true"
+            android:gravity="center_vertical|end"
+            android:orientation="vertical"
+            android:paddingEnd="15dp"
+            android:paddingStart="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/conditional_filtering"
+                android:textColor="@color/application_white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/application_white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <!-- 选中信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/application_gray"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/selectorCurve"
+                        android:layout_width="80dp"
+                        android:layout_height="20dp"
+                        android:background="@color/application_green"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/curve"
+                        android:textColor="@color/application_white"
+                        android:textSize="13sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/selectorTable"
+                        android:layout_width="80dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/textview_border"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/table"
+                        android:textColor="@color/application_text_gray"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:text="@string/site"
+                        android:textColor="@color/application_text_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/selectedSite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:textColor="@color/application_green"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 图表 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/application_white"
+                android:orientation="vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <!-- 图例 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:baselineAligned="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@color/application_orange" />
+
+                    <TextView
+                        android:id="@+id/legend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:textColor="@color/application_text_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/application_text_gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- 曲线图 -->
+                <LinearLayout
+                    android:id="@+id/curveChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/customCurveChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/line_chart1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 列表 -->
+                <LinearLayout
+                    android:id="@+id/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/linearlayout_border_brown"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@color/list2"
+                            android:gravity="center"
+                            android:text="@string/time"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/application_line_gray" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@color/list2"
+                            android:gravity="center"
+                            android:text="@string/value"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/application_line_gray" />
+
+                        <ListView
+                            android:id="@+id/tableList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/application_white"
+                            android:divider="@color/application_line_gray"
+                            android:dividerHeight="2dp"
+                            android:listSelector="@android:color/transparent"
+                            android:scrollbars="none" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/application_line_gray" />
+
+            <!-- 表格 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/application_white"
+                android:gravity="center"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/linearlayout_border_green"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <!-- 第1列 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="@color/table1"
+                            android:gravity="center"
+                            android:text="@string/max"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="@color/table1"
+                            android:gravity="center"
+                            android:text="@string/min"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table1"
+                            android:gravity="center"
+                            android:text="@string/average"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/application_green" />
+
+                    <!-- 第2列 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table2"
+                            android:gravity="center"
+                            android:text="@string/value"
+                            android:textColor="@color/application_green"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table2"
+                            android:gravity="center"
+                            android:text="@string/time"
+                            android:textColor="@color/application_green"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table2"
+                            android:gravity="center"
+                            android:text="@string/value"
+                            android:textColor="@color/application_green"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table2"
+                            android:gravity="center"
+                            android:text="@string/time"
+                            android:textColor="@color/application_green"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table2"
+                            android:gravity="center"
+                            android:text="@string/value"
+                            android:textColor="@color/application_green"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/application_green" />
+
+                    <!-- 第3列 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/maxValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table3"
+                            android:gravity="center"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:id="@+id/maxTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table3"
+                            android:gravity="center"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:id="@+id/minValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table3"
+                            android:gravity="center"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:id="@+id/minTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table3"
+                            android:gravity="center"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/application_green" />
+
+                        <TextView
+                            android:id="@+id/averageValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/table3"
+                            android:gravity="center"
+                            android:textColor="@color/application_text_gray"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

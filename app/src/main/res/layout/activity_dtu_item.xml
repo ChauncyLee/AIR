@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dtu_item"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/dtu"/>
+        <TextView
+            android:id="@+id/dtu_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DTU"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

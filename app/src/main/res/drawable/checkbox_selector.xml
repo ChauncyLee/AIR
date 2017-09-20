@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- checked样式 -->
+    <item android:drawable="@drawable/remember_password_checked"
+        android:state_checked="true" />
+
+    <!-- default样式 -->
+    <item android:drawable="@drawable/remember_password_unchecked"
+        android:state_checked="false" />
+
+</selector>

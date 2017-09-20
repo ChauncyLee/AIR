@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/application_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/application_green"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:baselineAligned="true"
+                android:gravity="center_vertical|start"
+                android:orientation="vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/back" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/conditional_filtering"
+                android:textColor="@color/application_white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <!-- 站点选择 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/application_gray"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/site_selection"
+                android:textColor="@color/title_text"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectSite"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/application_white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/current_site"
+                android:textColor="@color/application_text_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvSite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/selected_text"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <!-- 时间选择 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/application_gray"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/time_selection"
+                android:textColor="@color/title_text"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/application_white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/start_time"
+                android:textColor="@color/application_text_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/selected_text"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/application_gray" />
+
+        <RelativeLayout
+            android:id="@+id/selectEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/application_white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/end_time"
+                android:textColor="@color/application_text_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/selected_text"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <!-- 快速选择 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/application_gray"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/fast_selection"
+                android:textColor="@color/title_text"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/application_white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp">
+
+            <RadioButton
+                android:id="@+id/btnToday"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/today"
+                android:textColor="@color/application_text_gray"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/btnYesterday"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/yesterday"
+                android:textColor="@color/application_text_gray"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/btnWeek"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/week"
+                android:textColor="@color/application_text_gray"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- 底部 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/application_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/commit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/button_corner_green"
+            android:text="@string/commit"
+            android:textColor="@color/application_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
